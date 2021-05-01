@@ -2,6 +2,7 @@ package DeckSummary;
 
 import DeckSummary.ui.AnchorPosition;
 import DeckSummary.ui.NinePatchBaseTrimWidget;
+import DeckSummary.ui.PieChartWidget;
 import basemod.BaseMod;
 import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.RenderSubscriber;
@@ -21,6 +22,7 @@ public class DeckSummary implements PostInitializeSubscriber, RenderSubscriber {
     public static void initialize() { new DeckSummary(); }
 
     private NinePatchBaseTrimWidget w;
+    private PieChartWidget pieChartWidget;
 
     public DeckSummary() {
         BaseMod.subscribe(this);
@@ -35,6 +37,9 @@ public class DeckSummary implements PostInitializeSubscriber, RenderSubscriber {
                                    524, 300)
                 .withColors(Color.FOREST, Color.GOLD)
                 .anchorCenteredOnScreen();
+
+
+        pieChartWidget = new PieChartWidget().anchorCenteredOnScreen();
     }
 
     @Override
@@ -43,8 +48,12 @@ public class DeckSummary implements PostInitializeSubscriber, RenderSubscriber {
         sb.draw(ImageMaster.WHITE_SQUARE_IMG, 0, 0, Settings.WIDTH, Settings.HEIGHT);
 
         // Follow the mouse, but don't let it render outside the screen
-        w.anchoredAt(InputHelper.mX, InputHelper.mY, AnchorPosition.CENTER, false)
-         .snapIntoScreen(10)
-         .render(sb);
+//        w.anchoredAt(InputHelper.mX, InputHelper.mY, AnchorPosition.CENTER, false)
+//         .snapIntoScreen(10)
+//         .render(sb);
+
+//        w.render(sb);
+
+        pieChartWidget.render(sb);
     }
 }
