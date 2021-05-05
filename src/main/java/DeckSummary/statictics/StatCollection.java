@@ -4,6 +4,7 @@ import DeckSummary.statictics.entries.AbstractStatisticEntry;
 import com.megacrit.cardcrawl.cards.CardGroup;
 
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StatCollection {
@@ -17,6 +18,7 @@ public class StatCollection {
     }
 
     public void update() {
-        stats = entries.stream().map((entry) -> entry.count(cardGroup)).collect(Collectors.toCollection(ArrayList::new));
+        stats = entries.stream().map((entry) -> entry.count(cardGroup)).filter(Optional::isPresent)
+                .map(Optional::get).collect(Collectors.toCollection(ArrayList::new));
     }
 }

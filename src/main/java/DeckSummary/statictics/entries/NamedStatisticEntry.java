@@ -4,6 +4,8 @@ import DeckSummary.statictics.StatOutput;
 import DeckSummary.statictics.cardlibrary.CardStatsLibrary;
 import com.megacrit.cardcrawl.cards.CardGroup;
 
+import java.util.Optional;
+
 public class NamedStatisticEntry extends AbstractStatisticEntry {
     public String displayName;
     public String tag;
@@ -14,7 +16,7 @@ public class NamedStatisticEntry extends AbstractStatisticEntry {
     }
 
     @Override
-    public StatOutput count(CardGroup cardGroup) {
+    public Optional<StatOutput> count(CardGroup cardGroup) {
         int count = cardGroup.group.stream().map((card) -> {
             if (CardStatsLibrary.hasStatForCard(card.cardID, tag)) {
                 return CardStatsLibrary.getStatForCard(card.cardID, tag).ofCard(card);
@@ -23,6 +25,6 @@ public class NamedStatisticEntry extends AbstractStatisticEntry {
             }
         }).reduce(0, Integer::sum);
 
-        return new StatOutput(count > 0, displayName, count);
+        return count > 0 ? Optional.empty() : Optional.of(new StatOutput(displayName, count));
     }
 }
