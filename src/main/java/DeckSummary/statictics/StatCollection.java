@@ -17,6 +17,10 @@ public class StatCollection {
         this.entries = entries;
     }
 
+    public StatCollection(CardGroup cardGroup) {
+        this(cardGroup, new ArrayList<>());
+    }
+
     public void update() {
         stats = entries.stream().map((entry) -> entry.count(cardGroup)).filter(Optional::isPresent)
                 .map(Optional::get).collect(Collectors.toCollection(ArrayList::new));
