@@ -9,15 +9,15 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 
 public class CardStatsLibrary {
-    public static HashMap<String, HashMap<String, StatValue>> statsLibrary;
+    public static HashMap<String, HashMap<String, StatValue>> statsLibrary = new HashMap<>();
     public static Type typeToken = new TypeToken<HashMap<String, HashMap<String, StatValue>>>(){}.getType();
 
     public static Gson gson = new GsonBuilder()
             .registerTypeAdapter(StatValue.class, new StatValue.Deserializer()).create();
 
     public static void load() {
-        statsLibrary = gson.fromJson(new InputStreamReader(
-                CardStatsLibrary.class.getResourceAsStream("/DeckSummary/card_stats.json")), typeToken);
+        statsLibrary.putAll(gson.fromJson(new InputStreamReader(
+                CardStatsLibrary.class.getResourceAsStream("/DeckSummary/red_cards.json")), typeToken));
     }
 
     public static boolean hasStatForCard(String cardID, String statKey) {
