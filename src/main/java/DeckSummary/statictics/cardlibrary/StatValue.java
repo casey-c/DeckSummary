@@ -55,6 +55,8 @@ public class StatValue {
                 return card.baseBlock * value;
             case MULTIPLE_OF_MAGIC_NUMBER:
                 return card.baseMagicNumber * value;
+            case ENERGY:
+                return getEnergyMaster();
             case MULTIPLE_OF_ENERGY:
                 return getEnergyMaster() * value;
             case ENERGY_TIMES_DAMAGE:
