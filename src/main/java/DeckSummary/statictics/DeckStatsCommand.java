@@ -18,6 +18,6 @@ public class DeckStatsCommand extends ConsoleCommand {
     protected void execute(String[] _args, int _depth) {
         StatCollection statCollection = StatCollectionField.get(AbstractDungeon.player.masterDeck);
         statCollection.update();
-        statCollection.stats.forEach((stat) -> DevConsole.log(stat.name + ": " + stat.value));
+        statCollection.stats.forEach((stat) -> DevConsole.log(stat.name + ": " + stat.getValueString()));
     }
 }

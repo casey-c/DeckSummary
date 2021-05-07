@@ -17,9 +17,15 @@ public class NamedStatisticEntry extends AbstractStatisticEntry {
 
     @Override
     public Optional<StatOutput> count(CardGroup cardGroup) {
-        int count = cardGroup.group.stream().map((card) -> CardStatsLibrary.hasStatForCard(card.cardID, tag) ?
-                CardStatsLibrary.getStatForCard(card.cardID, tag).ofCard(card) : 0).reduce(0, Integer::sum);
+        int conservative = cardGroup.group.stream().map((card) -> CardStatsLibrary.hasEstimateForCard(card.cardID, tag) ?
+                CardStatsLibrary.getEstimateForCard(card.cardID, tag).conservativeEstimate.ofCard(card) : 0)
+                .reduce(0, Integer::sum);
 
-        return count > 0 ? Optional.of(new StatOutput(displayName, count)) : Optional.empty();
+        int optimistic = cardGroup.group.stream().map((card) -> CardStatsLibrary.hasEstimateForCard(card.cardID, tag) ?
+                CardStatsLibrary.getEstimateForCard(card.cardID, tag).optimisticEstimate.ofCard(card) : 0)
+                .reduce(0, Integer::sum);
+
+        return (conservative > 0 || optimistic > 0) ?
+                Optional.of(new StatOutput(displayName, conservative, optimistic)) : Optional.empty();
     }
 }

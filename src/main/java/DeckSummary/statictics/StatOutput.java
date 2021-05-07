@@ -2,10 +2,20 @@ package DeckSummary.statictics;
 
 public class StatOutput {
     public String name;
-    public int value;
+    public int conservativeEstimate;
+    public int optimisticEstimate;
 
-    public StatOutput(String name, int value) {
+    public StatOutput(String name, int conservativeEstimate, int optimisticEstimate) {
         this.name = name;
-        this.value = value;
+        this.conservativeEstimate = conservativeEstimate;
+        this.optimisticEstimate = optimisticEstimate;
+    }
+
+    public String getValueString() {
+        if (conservativeEstimate == optimisticEstimate) {
+            return Integer.toString(conservativeEstimate);
+        } else {
+            return conservativeEstimate + "-" + optimisticEstimate;
+        }
     }
 }
