@@ -137,6 +137,13 @@
       "optimistic": 2
     }
   },
+  "Sentinel+": {
+    "block": "BLOCK",
+    "energy": {
+      "conservative": 0,
+      "optimistic": 3
+    }
+  },
   "Sever Soul": {
     "damage": "DAMAGE"
   },

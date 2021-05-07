@@ -3,6 +3,7 @@ package DeckSummary.statictics.cardlibrary;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -26,7 +27,14 @@ public class CardStatsLibrary {
         return statsLibrary.containsKey(cardID) && statsLibrary.get(cardID).containsKey(statKey);
     }
 
-    public static StatEstimate getEstimateForCard(String cardID, String statKey) {
-        return statsLibrary.get(cardID).get(statKey);
+    public static StatEstimate getEstimateForCard(AbstractCard card, String statKey) {
+        // Entries can have the suffix "+" to represent a special case for an upgraded card.
+        if (card.upgraded) {
+            String upgradedID = card.cardID + "+";
+            if (hasEstimateForCard(card.cardID + "+", statKey)) {
+                return statsLibrary.get(upgradedID).get(statKey);
+            }
+        }
+        return statsLibrary.get(card.cardID).get(statKey);
     }
 }
