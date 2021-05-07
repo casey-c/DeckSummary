@@ -1,5 +1,138 @@
 {
+  "Anger": {
+    "damage": "DAMAGE"
+  },
+  "Armaments": {
+    "block": "BLOCK"
+  },
+  "Bash": {
+    "damage": "DAMAGE"
+  },
+  "Blood for Blood": {
+    "damage": "DAMAGE"
+  },
+  "Bludgeon": {
+    "damage": "DAMAGE"
+  },
+  "Carnage": {
+    "damage": "DAMAGE"
+  },
+  "Clash": {
+    "damage": "DAMAGE"
+  },
+  "Cleave": {
+    "damage": "DAMAGE"
+  },
+  "Clothesline": {
+    "damage": "DAMAGE"
+  },
+  "Defend_R": {
+    "block": "BLOCK"
+  },
+  "Dropkick": {
+    "damage": "DAMAGE"
+  },
+  "Feed": {
+    "damage": "DAMAGE"
+  },
+  "Fiend Fire": {
+    "damage": {
+      "value": 4,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Flame Barrier": {
+    "block": "BLOCK"
+  },
+  "Ghostly Armor": {
+    "block": "BLOCK"
+  },
+  "Headbutt": {
+    "damage": "DAMAGE"
+  },
+  "Heavy Blade": {
+    "damage": "DAMAGE"
+  },
+  "Hemokinesis": {
+    "damage": "DAMAGE"
+  },
+  "Immolate": {
+    "damage": "DAMAGE"
+  },
+  "Impervious": {
+    "block": "BLOCK"
+  },
+  "Iron Wave": {
+    "damage": "DAMAGE",
+    "block": "BLOCK"
+  },
+  "Perfected Strike": {
+    "damage": "DAMAGE"
+  },
+  "Pommel Strike": {
+    "damage": "DAMAGE"
+  },
+  "Power Through": {
+    "block": "BLOCK"
+  },
+  "Pummel": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "Rampage": {
+    "damage": "DAMAGE"
+  },
+  "Reaper": {
+    "damage": "DAMAGE"
+  },
+  "Reckless Charge": {
+    "damage": "DAMAGE"
+  },
+  "Searing Blow": {
+    "damage": "DAMAGE"
+  },
+  "Second Wind": {
+    "block": {
+      "value": 2,
+      "type": "MULTIPLE_OF_BLOCK"
+    }
+  },
+  "Sentinel": {
+    "block": "BLOCK"
+  },
+  "Sever Soul": {
+    "damage": "DAMAGE"
+  },
+  "Shrug It Off": {
+    "block": "BLOCK"
+  },
   "Strike_R": {
+    "damage": "DAMAGE"
+  },
+  "Sword Boomerang": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "Thunderclap": {
+    "damage": "DAMAGE"
+  },
+  "True Grit": {
+    "damage": "DAMAGE"
+  },
+  "Twin Strike": {
+    "damage": {
+      "value": 2,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Uppercut": {
+    "damage": "DAMAGE"
+  },
+  "Whirlwind": {
+    "damage": {
+      "value": 3,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Wild Strike": {
     "damage": "DAMAGE"
   }
 }
