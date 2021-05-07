@@ -56,7 +56,7 @@ public class StatValue {
 
     public static class Deserializer implements JsonDeserializer<StatValue> {
         @Override
-        // A StatValue entry can be serialised in a few different ways to make entering values easier.
+        // A StatValue entry can be serialized in a few different ways to make entering values easier.
         // First, it can be represented by a number directly, when read, it will be interpreted as a constant.
         // Second, it can be represented by an enum value, the enum value represents the method used to calculate the
         // value of the stat. For example, it can be the product of the card's damage number and magic number, or
