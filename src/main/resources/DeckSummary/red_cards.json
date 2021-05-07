@@ -8,11 +8,20 @@
   "Bash": {
     "damage": "DAMAGE"
   },
+  "Battle Trance": {
+    "draw": "MAGIC_NUMBER"
+  },
   "Blood for Blood": {
     "damage": "DAMAGE"
   },
+  "Bloodletting": {
+    "energy": "MAGIC_NUMBER"
+  },
   "Bludgeon": {
     "damage": "DAMAGE"
+  },
+  "Burning Pact": {
+    "draw": "MAGIC_NUMBER"
   },
   "Carnage": {
     "damage": "DAMAGE"
@@ -30,7 +39,9 @@
     "block": "BLOCK"
   },
   "Dropkick": {
-    "damage": "DAMAGE"
+    "damage": "DAMAGE",
+    "draw": 1,
+    "energy": 1
   },
   "Feed": {
     "damage": "DAMAGE"
@@ -66,11 +77,16 @@
     "damage": "DAMAGE",
     "block": "BLOCK"
   },
+  "Offering": {
+    "draw": "MAGIC_NUMBER",
+    "energy": 2
+  },
   "Perfected Strike": {
     "damage": "DAMAGE"
   },
   "Pommel Strike": {
-    "damage": "DAMAGE"
+    "damage": "DAMAGE",
+    "draw": "MAGIC_NUMBER"
   },
   "Power Through": {
     "block": "BLOCK"
@@ -96,14 +112,19 @@
       "type": "MULTIPLE_OF_BLOCK"
     }
   },
+  "Seeing Red": {
+    "energy": 2
+  },
   "Sentinel": {
-    "block": "BLOCK"
+    "block": "BLOCK",
+    "energy": "MAGIC_NUMBER"
   },
   "Sever Soul": {
     "damage": "DAMAGE"
   },
   "Shrug It Off": {
-    "block": "BLOCK"
+    "block": "BLOCK",
+    "draw": 1
   },
   "Strike_R": {
     "damage": "DAMAGE"

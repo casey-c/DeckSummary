@@ -22,7 +22,9 @@ public class StatCollection {
     public StatCollection(CardGroup cardGroup) {
         this(cardGroup, new ArrayList<>(Arrays.asList(
                 new NamedStatisticEntry("Damage", "damage"),
-                new NamedStatisticEntry("Block", "block")
+                new NamedStatisticEntry("Block", "block"),
+                new NamedStatisticEntry("Draw", "draw"),
+                new NamedStatisticEntry("Energy", "energy")
         )));
     }
 
