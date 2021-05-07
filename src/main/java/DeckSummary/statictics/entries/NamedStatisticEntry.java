@@ -17,13 +17,8 @@ public class NamedStatisticEntry extends AbstractStatisticEntry {
 
     @Override
     public Optional<StatOutput> count(CardGroup cardGroup) {
-        int count = cardGroup.group.stream().map((card) -> {
-            if (CardStatsLibrary.hasStatForCard(card.cardID, tag)) {
-                return CardStatsLibrary.getStatForCard(card.cardID, tag).ofCard(card);
-            } else {
-                return 0;
-            }
-        }).reduce(0, Integer::sum);
+        int count = cardGroup.group.stream().map((card) -> CardStatsLibrary.hasStatForCard(card.cardID, tag) ?
+                CardStatsLibrary.getStatForCard(card.cardID, tag).ofCard(card) : 0).reduce(0, Integer::sum);
 
         return count > 0 ? Optional.of(new StatOutput(displayName, count)) : Optional.empty();
     }
