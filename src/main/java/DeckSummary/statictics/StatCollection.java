@@ -1,9 +1,11 @@
 package DeckSummary.statictics;
 
 import DeckSummary.statictics.entries.AbstractStatisticEntry;
+import DeckSummary.statictics.entries.NamedStatisticEntry;
 import com.megacrit.cardcrawl.cards.CardGroup;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -18,7 +20,10 @@ public class StatCollection {
     }
 
     public StatCollection(CardGroup cardGroup) {
-        this(cardGroup, new ArrayList<>());
+        this(cardGroup, new ArrayList<>(Arrays.asList(
+                new NamedStatisticEntry("Damage", "damage"),
+                new NamedStatisticEntry("Block", "block")
+        )));
     }
 
     public void update() {
