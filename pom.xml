@@ -68,7 +68,7 @@
                         <configuration>
                             <target>
                                 <copy file="target/DeckSummary.jar"
-                                      tofile="C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\modsDeckSummary.jar"/>
+                                      tofile="C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\DeckSummary.jar"/>
                             </target>
                         </configuration>
                         <goals>

@@ -25,6 +25,6 @@ public class NamedStatisticEntry extends AbstractStatisticEntry {
             }
         }).reduce(0, Integer::sum);
 
-        return count > 0 ? Optional.empty() : Optional.of(new StatOutput(displayName, count));
+        return count > 0 ? Optional.of(new StatOutput(displayName, count)) : Optional.empty();
     }
 }
