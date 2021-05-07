@@ -167,8 +167,8 @@
   },
   "Whirlwind": {
     "damage": {
-      "value": 3,
-      "type": "MULTIPLE_OF_DAMAGE"
+      "conservative": 0,
+      "optimistic": "ENERGY_TIMES_DAMAGE"
     }
   },
   "Wild Strike": {

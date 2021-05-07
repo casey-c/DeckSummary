@@ -2,6 +2,7 @@ package DeckSummary.statictics.cardlibrary;
 
 import com.google.gson.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.lang.reflect.Type;
 import java.util.Arrays;
@@ -23,6 +24,11 @@ public class StatValue {
         if (other == null || getClass() != other.getClass()) return false;
         StatValue statValue = (StatValue) other;
         return value == statValue.value && type == statValue.type;
+    }
+
+    private static int getEnergyMaster() {
+        if (AbstractDungeon.player == null) return 3;
+        else return AbstractDungeon.player.energy.energyMaster;
     }
 
     public int ofCard(AbstractCard card) {
@@ -49,6 +55,14 @@ public class StatValue {
                 return card.baseBlock * value;
             case MULTIPLE_OF_MAGIC_NUMBER:
                 return card.baseMagicNumber * value;
+            case MULTIPLE_OF_ENERGY:
+                return getEnergyMaster() * value;
+            case ENERGY_TIMES_DAMAGE:
+                return getEnergyMaster() * card.baseDamage;
+            case ENERGY_TIMES_BLOCK:
+                return getEnergyMaster() * card.baseBlock;
+            case ENERGY_TIMES_MAGIC_NUMBER:
+                return getEnergyMaster() * card.baseMagicNumber;
             default:
                 return 0;
         }
