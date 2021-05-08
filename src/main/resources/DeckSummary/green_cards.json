@@ -138,7 +138,7 @@
       "conservative": 0,
       "optimistic": {
         "value": 9,
-        "damage": "MULTIPLE_OF_DAMAGE"
+        "type": "MULTIPLE_OF_DAMAGE"
       }
     }
   },
