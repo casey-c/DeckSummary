@@ -1,0 +1,252 @@
+{
+  "Aggregate": {
+    "energy": {
+      "conservative": 0,
+      "optimistic": {
+        "operator": "/",
+        "values": [
+          {
+            "operator": "-",
+            "values": ["DECK_SIZE", "MASTER_HAND_SIZE"]
+          },
+          "MAGIC_NUMBER"
+        ]
+      }
+    }
+  },
+  "All For One": {
+    "damage": "DAMAGE"
+  },
+  "Auto Shields": {
+    "block": {
+      "conservative": 0,
+      "optimistic": "BLOCK"
+    }
+  },
+  "Ball Lightning": {
+    "damage": "DAMAGE",
+    "lightning": "MAGIC_NUMBER"
+  },
+  "Barrage": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": {
+        "value": 3,
+        "type": "MULTIPLE_OF_DAMAGE"
+      }
+    }
+  },
+  "Beam Cell": {
+    "damage": "DAMAGE"
+  },
+  "Blizzard": {
+
+  },
+  "Boot Sequence": {
+    "block": "BLOCK"
+  },
+  "Chaos": {
+    "lightning": { "conservative": 0, "optimistic": "MAGIC_NUMBER" },
+    "frost": { "conservative": 0, "optimistic": "MAGIC_NUMBER" },
+    "dark": { "conservative": 0, "optimistic": "MAGIC_NUMBER" },
+    "plasma": { "conservative": 0, "optimistic": "MAGIC_NUMBER" }
+  },
+  "Chill": {
+    "frost": {
+      "conservative": 0,
+      "optimistic": 3
+    }
+  },
+  "Claw": {
+    "damage": "DAMAGE"
+  },
+  "Cold Snap": {
+    "damage": "DAMAGE",
+    "frost": "MAGIC_NUMBER"
+  },
+  "Compile Driver": {
+    "damage": "DAMAGE",
+    "draw": {
+      "conservative": 1,
+      "optimistic": 3
+    }
+  },
+  "Conserve Battery": {
+    "block": "BLOCK",
+    "energy": 1
+  },
+  "Coolheaded": {
+    "frost": 1,
+    "draw": "MAGIC_NUMBER"
+  },
+  "Core Surge": {
+    "damage": "DAMAGE"
+  },
+  "Darkness": {
+    "dark": "MAGIC_NUMBER"
+  },
+  "Defend_B": {
+    "block": "BLOCK"
+  },
+  "Doom and Gloom": {
+    "damage": "DAMAGE",
+    "dark": "MAGIC_NUMBER"
+  },
+  "Double Energy": {
+    "energy": {
+      "conservative": 0,
+      "optimistic": "ENERGY"
+    }
+  },
+  "Electrodynamics": {
+    "lightning": "MAGIC_NUMBER"
+  },
+  "Undo": {
+    "block": "BLOCK"
+  },
+  "FTL": {
+    "damage": "DAMAGE",
+    "draw": {
+      "conservative": 0,
+      "optimistic": 1
+    }
+  },
+  "Fission": {
+    "draw": { "conservative": 0, "optimistic": 3 },
+    "energy": { "conservative": 0, "optimistic": 3 }
+  },
+  "Force Field": {
+    "block": "BLOCK"
+  },
+  "Fusion": {
+    "plasma": "MAGIC_NUMBER"
+  },
+  "Genetic Algorithm": {
+    "block": "BLOCK"
+  },
+  "Glacier": {
+    "block": "BLOCK",
+    "frost": "MAGIC_NUMBER"
+  },
+  "Go for the Eyes": {
+    "damage": "DAMAGE"
+  },
+  "Hologram": {
+    "block": "BLOCK"
+  },
+  "Hyperbeam": {
+    "damage": "DAMAGE"
+  },
+  "Leap": {
+    "block": "BLOCK"
+  },
+  "Lockon": {
+    "damage": "DAMAGE"
+  },
+  "Melter": {
+    "damage": "DAMAGE"
+  },
+  "Meteor Strike": {
+    "damage": "DAMAGE",
+    "plasma": "MAGIC_NUMBER"
+  },
+  "Steam Power": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Rainbow": {
+    "lightning": 1,
+    "frost": 1,
+    "dark": 1
+  },
+  "Reboot": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Rebound": {
+    "damage": "DAMAGE"
+  },
+  "Recycle": {
+    "energy": {
+      "conservative": 0,
+      "optimistic": 3
+    }
+  },
+  "Reinforced Body": {
+    "block": {
+      "conservative": 0,
+      "optimistic": "ENERGY_TIMES_BLOCK"
+    }
+  },
+  "Rip and Tear": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "Scrape": {
+    "damage": "DAMAGE",
+    "draw": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "Seek": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Self Repair": {
+    "heal": "MAGIC_NUMBER"
+  },
+  "Skim": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Stack": {
+    "block": {
+      "conservative": 0,
+      "optimistic": "DECK_SIZE"
+    }
+  },
+  "Stack+": {
+    "block": {
+      "conservative": 0,
+      "optimistic": {
+        "operator": "+",
+        "values": ["DECK_SIZE", 3]
+      }
+    }
+  },
+  "Steam": {
+    "block": "BLOCK"
+  },
+  "Streamline": {
+    "damage": "DAMAGE"
+  },
+  "Strike_B": {
+    "damage": "DAMAGE"
+  },
+  "Sunder": {
+    "damage": "DAMAGE"
+  },
+  "Sweeping Beam": {
+    "damage": "DAMAGE"
+  },
+  "Tempest": {
+    "lightning": {
+      "conservative": 0,
+      "optimistic": "ENERGY"
+    }
+  },
+  "Tempest+": {
+    "lightning": {
+      "conservative": 1,
+      "optimistic": {
+        "operator": "+",
+        "values": ["ENERGY", 1]
+      }
+    }
+  },
+  "Thunder Strike": {
+
+  },
+  "Turbo": {
+    "energy": "MAGIC_NUMBER"
+  },
+  "Zap": {
+    "lightning": "MAGIC_NUMBER"
+  }
+}

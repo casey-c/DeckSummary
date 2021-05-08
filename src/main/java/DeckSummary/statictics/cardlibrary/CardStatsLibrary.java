@@ -33,7 +33,10 @@ public class CardStatsLibrary {
 
         loadCardStats("red_cards.json");
         loadCardStats("green_cards.json");
+        loadCardStats("blue_cards.json");
         loadCardStats("colourless_cards.json");
+
+        logger.info("Finished loading card stats.");
     }
 
     private static void loadCardStats(String fileName) {

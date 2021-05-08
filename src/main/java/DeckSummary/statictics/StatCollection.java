@@ -27,6 +27,11 @@ public class StatCollection {
                 new NamedStatisticEntry("Energy", "energy"),
                 // Silent
                 new NamedStatisticEntry("Poison", "poison"),
+                // Defect
+                new NamedStatisticEntry("Lightning", "lightning"),
+                new NamedStatisticEntry("Frost", "frost"),
+                new NamedStatisticEntry("Dark", "dark"),
+                new NamedStatisticEntry("Plasma", "plasma"),
                 // Colourless
                 new NamedStatisticEntry("Heal", "heal")
         )));
