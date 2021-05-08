@@ -21,6 +21,11 @@ public class CardStatsLibrary {
     public static void load() {
         statsLibrary.putAll(gson.fromJson(new InputStreamReader(
                 CardStatsLibrary.class.getResourceAsStream("/DeckSummary/red_cards.json")), typeToken));
+        statsLibrary.putAll(gson.fromJson(new InputStreamReader(
+                CardStatsLibrary.class.getResourceAsStream("/DeckSummary/green_cards.json")), typeToken));
+
+        statsLibrary.putAll(gson.fromJson(new InputStreamReader(
+                CardStatsLibrary.class.getResourceAsStream("/DeckSummary/colourless_cards.json")), typeToken));
     }
 
     public static boolean hasEstimateForCard(String cardID, String statKey) {
