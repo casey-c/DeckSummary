@@ -13,17 +13,17 @@ public class TestStatValue {
 
     @Test
     public void testNumberDeserialization() {
-        assertEquals(gson.fromJson("1", StatValue.class), new StatValue(1, StatValue.ValueType.CONSTANT));
+        assertEquals(new StatValue(1, StatValue.ValueType.CONSTANT), gson.fromJson("1", StatValue.class));
     }
 
     @Test
     public void testEnumDeserialization() {
-        assertEquals(gson.fromJson("NONE", StatValue.class), new StatValue(0, StatValue.ValueType.NONE));
+        assertEquals(new StatValue(0, StatValue.ValueType.NONE), gson.fromJson("NONE", StatValue.class));
     }
 
     @Test
     public void testObjectDeserialization() {
-        assertEquals(gson.fromJson("{\"value\": 3, \"type\": \"MULTIPLE_OF_BLOCK\"}", StatValue.class),
-                new StatValue(3, StatValue.ValueType.MULTIPLE_OF_BLOCK));
+        assertEquals(new StatValue(3, StatValue.ValueType.MULTIPLE_OF_BLOCK),
+                gson.fromJson("{\"value\": 3, \"type\": \"MULTIPLE_OF_BLOCK\"}", StatValue.class));
     }
 }

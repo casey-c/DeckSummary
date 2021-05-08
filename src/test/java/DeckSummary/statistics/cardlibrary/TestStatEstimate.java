@@ -16,14 +16,15 @@ public class TestStatEstimate {
 
     @Test
     public void testStatValueDeserialization() {
-        assertEquals(gson.fromJson("1", StatEstimate.class), new StatEstimate(
-                new StatValue(1, StatValue.ValueType.CONSTANT), new StatValue(1, StatValue.ValueType.CONSTANT)));
+        assertEquals(new StatEstimate(new StatValue(1, StatValue.ValueType.CONSTANT),
+                new StatValue(1, StatValue.ValueType.CONSTANT)), gson.fromJson("1", StatEstimate.class));
     }
 
     @Test
     public void testStatEstimateDeserialization() {
-        assertEquals(gson.fromJson("{\"conservative\": 2, \"optimistic\": {\"value\": 3, type: \"MULTIPLE_OF_DAMAGE\"}}",
-                StatEstimate.class), new StatEstimate(new StatValue(2, StatValue.ValueType.CONSTANT),
-                new StatValue(3, StatValue.ValueType.MULTIPLE_OF_DAMAGE)));
+        assertEquals(new StatEstimate(new StatValue(2, StatValue.ValueType.CONSTANT),
+                new StatValue(3, StatValue.ValueType.MULTIPLE_OF_DAMAGE)),
+                gson.fromJson("{\"conservative\": 2, \"optimistic\": {\"value\": 3, type: \"MULTIPLE_OF_DAMAGE\"}}",
+                StatEstimate.class));
     }
 }
