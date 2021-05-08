@@ -1,0 +1,275 @@
+{
+  "Blasphemy": {
+    "divinity": 1
+  },
+  "BowlingBash": {
+    "damage": {
+      "conservative": "DAMAGE",
+      "optimistic": {
+        "value": 3,
+        "type": "MULTIPLE_OF_DAMAGE"
+      }
+    }
+  },
+  "Brilliance": {
+    "damage": "DAMAGE"
+  },
+  "Carve Reality": {
+    "damage": {
+      "operator": "+",
+      "values": ["DAMAGE", 12]
+    }
+  },
+  "Collect": {
+    "energy": {
+      "conservative": 0,
+      "optimistic": {
+        "value": 2,
+        "type": "MULTIPLE_OF_ENERGY"
+      }
+    }
+  },
+  "Collect+": {
+    "energy": {
+      "conservative": 2,
+      "optimistic": {
+        "operator": "+",
+        "value": [{
+          "value": 2,
+          "type": "MULTIPLE_OF_ENERGY"
+        }, 2]
+      }
+    }
+  },
+  "Conclude": {
+    "damage": "DAMAGE"
+  },
+  "Consecrate": {
+    "damage": "DAMAGE"
+  },
+  "Crescendo": {
+    "wrath": 1
+  },
+  "CrushJoints": {
+    "damage": "DAMAGE"
+  },
+  "CutThroughFate": {
+    "damage": "DAMAGE",
+    "draw": 1,
+    "scry_instance": 1,
+    "scry_potential": "MAGIC_NUMBER"
+  },
+  "DeceiveReality": {
+    "block": {
+      "operator": "+",
+      "values": ["BLOCK", 12]
+    }
+  },
+  "Defend_P": {
+    "block": "BLOCK"
+  },
+  "DeusExMachina": {
+    "energy": "MAGIC_NUMBER"
+  },
+  "EmptyBody": {
+    "block": "BLOCK",
+    "empty": 1
+  },
+  "EmptyFist": {
+    "damage": "DAMAGE",
+    "empty": 1
+  },
+  "EmptyMind": {
+    "draw": "MAGIC_NUMBER",
+    "empty": 1
+  },
+  "Eruption": {
+    "damage": "DAMAGE",
+    "wrath": 1
+  },
+  "Evaluate": {
+    "block": "BLOCK"
+  },
+  "FearNoEvil": {
+    "damage": "DAMAGE",
+    "calm": 1
+  },
+  "FlurryOfBlows": {
+    "damage": "DAMAGE"
+  },
+  "FlyingSleeves": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "FollowUp": {
+    "damage": "DAMAGE"
+  },
+  "Halt": {
+    "block": "BLOCK_PLUS_MAGIC_NUMBER"
+  },
+  "Indignation": {
+    "wrath": 1
+  },
+  "InnerPeace": {
+    "calm": 1,
+    "draw": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "Judgment": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "JustLucky": {
+    "damage": "DAMAGE",
+    "block": "BLOCK",
+    "scry_instance": 1,
+    "scry_potential": "MAGIC_NUMBER"
+  },
+  "LessonLearned": {
+    "damage": "DAMAGE"
+  },
+  "Meditate": {
+    "calm": 1
+  },
+  "Perseverance": {
+    "block": "BLOCK"
+  },
+  "Pray": {
+    "mantra": "MAGIC_NUMBER"
+  },
+  "PathToVictory": {
+    "mark": "MAGIC_NUMBER"
+  },
+  "Prostrate": {
+    "block": "BLOCK",
+    "mantra": "MAGIC_NUMBER"
+  },
+  "Protect": {
+    "block": "BLOCK"
+  },
+  "Ragnarok": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "ReachHeaven": {
+    "draw": -1,
+    "damage": {
+      "operation": "+",
+      "values": ["DAMAGE", 20]
+    }
+  },
+  "Sanctity": {
+    "block": "BLOCK",
+    "draw": {
+      "conservative": 0,
+      "optimistic": 2
+    }
+  },
+  "SandsOfTime": {
+    "damage": "DAMAGE"
+  },
+  "SashWhip": {
+    "damage": "DAMAGE"
+  },
+  "Scrawl": {
+    "draw": {
+      "conservative": {
+        "operator": "-",
+        "values": [10, "MASTER_HAND_SIZE"]
+      },
+      "optimistic": 10
+    }
+  },
+  "SignatureMove": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": "DAMAGE"
+    }
+  },
+  "Vengeance": {
+    "draw": "MAGIC_NUMBER",
+    "wrath": 1
+  },
+  "SpiritShield": {
+    "block": {
+      "conservative": {
+        "operator": "*",
+        "value": [
+          {
+            "operator": "/",
+            "values": ["MASTER_HAND_SIZE", 2]
+          },
+          "MAGIC_NUMBER"
+        ]
+      },
+      "optimistic": {
+        "value": 9,
+        "type": "MULTIPLE_OF_MAGIC_NUMBER"
+      }
+    }
+  },
+  "Strike_P": {
+    "damage": "DAMAGE"
+  },
+  "Swivel": {
+    "block": "BLOCK"
+  },
+  "TalkToTheHand": {
+    "damage": "DAMAGE"
+  },
+  "Tantrum": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER",
+    "wrath": 1
+  },
+  "ThirdEye": {
+    "block": "BLOCK",
+    "scry_instance": 1,
+    "scry_potential": "MAGIC_NUMBER"
+  },
+  "ClearTheMind": {
+    "calm": 1
+  },
+  "Vault": {
+    "draw": "MASTER_HAND_SIZE",
+    "energy": {
+      "operator": "-",
+      "value": [
+        "ENERGY",
+        3
+      ]
+    }
+  },
+  "Vault+": {
+    "draw": "MASTER_HAND_SIZE",
+    "energy": {
+      "operator": "-",
+      "value": [
+        "ENERGY",
+        2
+      ]
+    }
+  },
+  "Vigilance": {
+    "block": "BLOCK",
+    "calm": 1
+  },
+  "Wallop": {
+    "damage": "DAMAGE",
+    "block": "DAMAGE"
+  },
+  "Weave": {
+    "damage": "DAMAGE"
+  },
+  "WheelKick": {
+    "damage": "DAMAGE",
+    "draw": "MAGIC_NUMBER"
+  },
+  "WindmillStrike": {
+    "damage": "DAMAGE"
+  },
+  "Worship": {
+    "mantra": 5
+  }
+}

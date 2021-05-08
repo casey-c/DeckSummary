@@ -32,6 +32,15 @@ public class StatCollection {
                 new NamedStatisticEntry("Frost", "frost"),
                 new NamedStatisticEntry("Dark", "dark"),
                 new NamedStatisticEntry("Plasma", "plasma"),
+                // Watcher
+                new NamedStatisticEntry("Calm", "calm"),
+                new NamedStatisticEntry("Wrath", "wrath"),
+                new NamedStatisticEntry("Exit", "empty"),
+                new NamedStatisticEntry("Divinity", "divinity"),
+                new NamedStatisticEntry("Mantra", "mantra"),
+                new NamedStatisticEntry("Mark", "mark"),
+                new NamedStatisticEntry("Scry Instances", "scry_instance"),
+                new NamedStatisticEntry("Scry Potential", "scry_potential"),
                 // Colourless
                 new NamedStatisticEntry("Heal", "heal")
         )));
