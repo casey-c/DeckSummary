@@ -105,12 +105,22 @@ public class StatValue implements Expression {
             // If the entry is an object, interpret its fields.
             if (jsonElement.isJsonObject()) {
                 JsonObject object = jsonElement.getAsJsonObject();
-                return new StatValue(object.get("value").getAsInt(),
-                        // Can be using the default deserializer of ValueType, but prefer the stream because it looks
-                        // nicer.
-                        Arrays.stream(ValueType.values())
-                        .filter((value) -> value.name().equals(object.get("type").getAsString()))
-                        .findFirst().orElse(ValueType.CONSTANT));
+                if (object.has("type") && object.has("value")) {
+                    if (object.get("type").isJsonPrimitive() && object.get("type").getAsJsonPrimitive().isString() &&
+                            object.get("value").isJsonPrimitive() && object.get("value").getAsJsonPrimitive().isNumber()) {
+                        return new StatValue(object.get("value").getAsInt(),
+                                // Can be using the default deserializer of ValueType, but prefer the stream because it looks
+                                // nicer.
+                                Arrays.stream(ValueType.values())
+                                        .filter((value) -> value.name().equals(object.get("type").getAsString()))
+                                        .findFirst().orElse(ValueType.CONSTANT));
+                    } else {
+                        throw new JsonParseException("Expected the field \"type\" to be a String and \"value\" to be a number.");
+                    }
+                } else {
+                    throw new JsonParseException("Expected the object representation of StatValue to have a \"type\" " +
+                            "field and a \"value\" field.");
+                }
             }
 
             return new StatValue(0, ValueType.NONE);
