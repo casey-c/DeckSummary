@@ -5,8 +5,11 @@ import DeckSummary.statictics.ast.Operation;
 import DeckSummary.statictics.ast.StatValue;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParseException;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -16,6 +19,8 @@ public class CardStatsLibrary {
     public static HashMap<String, HashMap<String, StatEstimate>> statsLibrary = new HashMap<>();
     public static Type typeToken = new TypeToken<HashMap<String, HashMap<String, StatEstimate>>>(){}.getType();
 
+    private static final Logger logger = LogManager.getLogger(CardStatsLibrary.class.getName());
+
     public static Gson gson = new GsonBuilder()
             .registerTypeAdapter(StatEstimate.class, new StatEstimate.Deserializer())
             .registerTypeAdapter(Expression.class, new Expression.Deserializer())
@@ -24,13 +29,24 @@ public class CardStatsLibrary {
             .create();
 
     public static void load() {
-        statsLibrary.putAll(gson.fromJson(new InputStreamReader(
-                CardStatsLibrary.class.getResourceAsStream("/DeckSummary/red_cards.json")), typeToken));
-        statsLibrary.putAll(gson.fromJson(new InputStreamReader(
-                CardStatsLibrary.class.getResourceAsStream("/DeckSummary/green_cards.json")), typeToken));
+        logger.info("Loading card stats.");
 
-        statsLibrary.putAll(gson.fromJson(new InputStreamReader(
-                CardStatsLibrary.class.getResourceAsStream("/DeckSummary/colourless_cards.json")), typeToken));
+        loadCardStats("red_cards.json");
+        loadCardStats("green_cards.json");
+        loadCardStats("colourless_cards.json");
+    }
+
+    private static void loadCardStats(String fileName) {
+        logger.info("Loading card stats from " + fileName + ".");
+
+        try {
+            statsLibrary.putAll(gson.fromJson(new InputStreamReader(
+                    CardStatsLibrary.class.getResourceAsStream("/DeckSummary/" + fileName)), typeToken));
+            logger.info("Successfully loaded card stats from " + fileName + ".");
+        } catch (JsonParseException exception) {
+            logger.error("Failed to load card stats from " + fileName + ". Skipping.");
+            exception.printStackTrace();
+        }
     }
 
     public static boolean hasEstimateForCard(String cardID, String statKey) {
