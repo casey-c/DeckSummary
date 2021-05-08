@@ -23,7 +23,8 @@ public class StatValue implements Expression {
         DAMAGE_TIMES_MAGIC_NUMBER, BLOCK_TIMES_MAGIC_NUMBER,
         DAMAGE_PLUS_MAGIC_NUMBER, BLOCK_PLUS_MAGIC_NUMBER,
         MULTIPLE_OF_DAMAGE, MULTIPLE_OF_BLOCK, MULTIPLE_OF_MAGIC_NUMBER, MULTIPLE_OF_ENERGY,
-        ENERGY, ENERGY_TIMES_DAMAGE, ENERGY_TIMES_BLOCK, ENERGY_TIMES_MAGIC_NUMBER
+        ENERGY, ENERGY_TIMES_DAMAGE, ENERGY_TIMES_BLOCK, ENERGY_TIMES_MAGIC_NUMBER,
+        DECK_SIZE, MASTER_HAND_SIZE
     }
 
     @Override
@@ -73,6 +74,10 @@ public class StatValue implements Expression {
                 return getEnergyMaster() * card.baseBlock;
             case ENERGY_TIMES_MAGIC_NUMBER:
                 return getEnergyMaster() * card.baseMagicNumber;
+            case DECK_SIZE:
+                return AbstractDungeon.player == null ? 10 : AbstractDungeon.player.masterDeck.size();
+            case MASTER_HAND_SIZE:
+                return AbstractDungeon.player == null ? 5 : AbstractDungeon.player.masterHandSize;
             default:
                 return 0;
         }
