@@ -1,4 +1,4 @@
-package DeckSummary.statictics.cardlibrary;
+package DeckSummary.statictics.ast;
 
 import com.google.gson.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 
-public class StatValue {
+public class StatValue implements Expression {
     int value = 0;
     ValueType type = ValueType.NONE;
 
@@ -16,6 +16,14 @@ public class StatValue {
     public StatValue(int value, ValueType type) {
         this.value = value;
         this.type = type;
+    }
+
+    public enum ValueType {
+        NONE, CONSTANT, DAMAGE, BLOCK, MAGIC_NUMBER,
+        DAMAGE_TIMES_MAGIC_NUMBER, BLOCK_TIMES_MAGIC_NUMBER,
+        DAMAGE_PLUS_MAGIC_NUMBER, BLOCK_PLUS_MAGIC_NUMBER,
+        MULTIPLE_OF_DAMAGE, MULTIPLE_OF_BLOCK, MULTIPLE_OF_MAGIC_NUMBER, MULTIPLE_OF_ENERGY,
+        ENERGY, ENERGY_TIMES_DAMAGE, ENERGY_TIMES_BLOCK, ENERGY_TIMES_MAGIC_NUMBER
     }
 
     @Override
@@ -31,7 +39,7 @@ public class StatValue {
         else return AbstractDungeon.player.energy.energyMaster;
     }
 
-    public int ofCard(AbstractCard card) {
+    public int evaluate(AbstractCard card) {
         switch (type) {
             case CONSTANT:
                 return value;

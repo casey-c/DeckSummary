@@ -1,8 +1,7 @@
 package DeckSummary.statistics.cardlibrary;
 
 import DeckSummary.statictics.cardlibrary.StatEstimate;
-import DeckSummary.statictics.cardlibrary.StatValue;
-import DeckSummary.statictics.cardlibrary.ValueType;
+import DeckSummary.statictics.ast.StatValue;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.junit.jupiter.api.Test;
@@ -18,13 +17,13 @@ public class TestStatEstimate {
     @Test
     public void testStatValueDeserialization() {
         assertEquals(gson.fromJson("1", StatEstimate.class), new StatEstimate(
-                new StatValue(1, ValueType.CONSTANT), new StatValue(1, ValueType.CONSTANT)));
+                new StatValue(1, StatValue.ValueType.CONSTANT), new StatValue(1, StatValue.ValueType.CONSTANT)));
     }
 
     @Test
     public void testStatEstimateDeserialization() {
         assertEquals(gson.fromJson("{\"conservative\": 2, \"optimistic\": {\"value\": 3, type: \"MULTIPLE_OF_DAMAGE\"}}",
-                StatEstimate.class), new StatEstimate(new StatValue(2, ValueType.CONSTANT),
-                new StatValue(3, ValueType.MULTIPLE_OF_DAMAGE)));
+                StatEstimate.class), new StatEstimate(new StatValue(2, StatValue.ValueType.CONSTANT),
+                new StatValue(3, StatValue.ValueType.MULTIPLE_OF_DAMAGE)));
     }
 }
