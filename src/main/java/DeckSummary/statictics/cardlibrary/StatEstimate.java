@@ -1,5 +1,7 @@
 package DeckSummary.statictics.cardlibrary;
 
+import DeckSummary.statictics.ast.Expression;
+import DeckSummary.statictics.ast.StatValue;
 import com.google.gson.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -7,11 +9,11 @@ import java.lang.reflect.Type;
 
 public class StatEstimate {
     @SerializedName("conservative")
-    public StatValue conservativeEstimate;
+    public Expression conservativeEstimate;
     @SerializedName("optimistic")
-    public StatValue optimisticEstimate;
+    public Expression optimisticEstimate;
 
-    public StatEstimate(StatValue conservativeEstimate, StatValue optimisticEstimate) {
+    public StatEstimate(Expression conservativeEstimate, Expression optimisticEstimate) {
         this.conservativeEstimate = conservativeEstimate;
         this.optimisticEstimate = optimisticEstimate;
     }
@@ -40,13 +42,13 @@ public class StatEstimate {
                 // If the json element contains both a conservative and optimistic field, it will be considered a
                 // StatEstimate and deserialized directly.
                 if (object.has("conservative") && object.has("optimistic")) {
-                    return new StatEstimate(context.deserialize(object.get("conservative"), StatValue.class),
-                            context.deserialize(object.get("optimistic"), StatValue.class));
+                    return new StatEstimate(context.deserialize(object.get("conservative"), Expression.class),
+                            context.deserialize(object.get("optimistic"), Expression.class));
                 }
             }
 
             // Otherwise it will be deserialized as a StatValue
-            StatValue neutralEstimate = context.deserialize(jsonElement, StatValue.class);
+            Expression neutralEstimate = context.deserialize(jsonElement, Expression.class);
             return new StatEstimate(neutralEstimate, neutralEstimate);
         }
     }

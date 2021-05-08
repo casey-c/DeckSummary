@@ -1,5 +1,7 @@
 package DeckSummary.statistics.cardlibrary;
 
+import DeckSummary.statictics.ast.Expression;
+import DeckSummary.statictics.ast.Operation;
 import DeckSummary.statictics.cardlibrary.StatEstimate;
 import DeckSummary.statictics.ast.StatValue;
 import com.google.gson.Gson;
@@ -9,9 +11,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestStatEstimate {
-    private static Gson gson = new GsonBuilder()
-            .registerTypeAdapter(StatValue.class, new StatValue.Deserializer())
+    public static Gson gson = new GsonBuilder()
             .registerTypeAdapter(StatEstimate.class, new StatEstimate.Deserializer())
+            .registerTypeAdapter(Expression.class, new Expression.Deserializer())
+            .registerTypeAdapter(Operation.Operator.class, new Operation.Operator.Deserializer())
+            .registerTypeAdapter(StatValue.class, new StatValue.Deserializer())
             .create();
 
     @Test

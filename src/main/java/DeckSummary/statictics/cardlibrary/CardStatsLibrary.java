@@ -1,5 +1,8 @@
 package DeckSummary.statictics.cardlibrary;
 
+import DeckSummary.statictics.ast.Expression;
+import DeckSummary.statictics.ast.Operation;
+import DeckSummary.statictics.ast.StatValue;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -14,8 +17,10 @@ public class CardStatsLibrary {
     public static Type typeToken = new TypeToken<HashMap<String, HashMap<String, StatEstimate>>>(){}.getType();
 
     public static Gson gson = new GsonBuilder()
-            .registerTypeAdapter(StatValue.class, new StatValue.Deserializer())
             .registerTypeAdapter(StatEstimate.class, new StatEstimate.Deserializer())
+            .registerTypeAdapter(Expression.class, new Expression.Deserializer())
+            .registerTypeAdapter(Operation.Operator.class, new Operation.Operator.Deserializer())
+            .registerTypeAdapter(StatValue.class, new StatValue.Deserializer())
             .create();
 
     public static void load() {
