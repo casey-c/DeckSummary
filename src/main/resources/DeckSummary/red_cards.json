@@ -53,7 +53,8 @@
     }
   },
   "Feed": {
-    "damage": "DAMAGE"
+    "damage": "DAMAGE",
+    "heal": "MAGIC_NUMBER"
   },
   "Fiend Fire": {
     "damage": {
@@ -110,7 +111,8 @@
     "damage": "DAMAGE"
   },
   "Reaper": {
-    "damage": "DAMAGE"
+    "damage": "DAMAGE",
+    "heal": "DAMAGE"
   },
   "Reckless Charge": {
     "damage": "DAMAGE"

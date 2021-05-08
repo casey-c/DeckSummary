@@ -26,7 +26,9 @@ public class StatCollection {
                 new NamedStatisticEntry("Draw", "draw"),
                 new NamedStatisticEntry("Energy", "energy"),
                 // Silent
-                new NamedStatisticEntry("Poison", "poison")
+                new NamedStatisticEntry("Poison", "poison"),
+                // Colourless
+                new NamedStatisticEntry("Heal", "heal")
         )));
     }
 
