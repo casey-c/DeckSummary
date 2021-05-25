@@ -1,6 +1,6 @@
-package DeckSummary.statictics;
+package DeckSummary.statistics;
 
-import DeckSummary.statictics.patches.StatCollectionField;
+import DeckSummary.statistics.patches.StatCollectionField;
 import basemod.DevConsole;
 import basemod.devcommands.ConsoleCommand;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

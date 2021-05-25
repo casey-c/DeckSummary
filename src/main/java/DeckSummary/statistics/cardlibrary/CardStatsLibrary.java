@@ -1,8 +1,8 @@
-package DeckSummary.statictics.cardlibrary;
+package DeckSummary.statistics.cardlibrary;
 
-import DeckSummary.statictics.ast.Expression;
-import DeckSummary.statictics.ast.Operation;
-import DeckSummary.statictics.ast.StatValue;
+import DeckSummary.statistics.ast.Expression;
+import DeckSummary.statistics.ast.Operation;
+import DeckSummary.statistics.ast.StatValue;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
@@ -44,7 +44,7 @@ public class CardStatsLibrary {
 
         try {
             statsLibrary.putAll(gson.fromJson(new InputStreamReader(
-                    CardStatsLibrary.class.getResourceAsStream("/DeckSummary/" + fileName)), typeToken));
+                    CardStatsLibrary.class.getResourceAsStream("/DeckSummary/data/" + fileName)), typeToken));
             logger.info("Successfully loaded card stats from " + fileName + ".");
         } catch (JsonParseException exception) {
             logger.error("Failed to load card stats from " + fileName + ". Skipping.");

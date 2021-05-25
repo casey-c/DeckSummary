@@ -1,4 +1,4 @@
-package DeckSummary.statictics.ast;
+package DeckSummary.statistics.ast;
 
 import com.google.gson.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;

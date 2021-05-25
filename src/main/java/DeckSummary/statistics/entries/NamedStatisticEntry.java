@@ -1,7 +1,7 @@
-package DeckSummary.statictics.entries;
+package DeckSummary.statistics.entries;
 
-import DeckSummary.statictics.StatOutput;
-import DeckSummary.statictics.cardlibrary.CardStatsLibrary;
+import DeckSummary.statistics.StatOutput;
+import DeckSummary.statistics.cardlibrary.CardStatsLibrary;
 import com.megacrit.cardcrawl.cards.CardGroup;
 
 import java.util.Optional;

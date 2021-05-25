@@ -24,7 +24,7 @@
     "damage": {
       "conservative": "DAMAGE",
       "optimistic": {
-        "value": "2",
+        "value": 2,
         "type": "MULTIPLE_OF_DAMAGE"
       }
     }

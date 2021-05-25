@@ -1,7 +1,6 @@
-package DeckSummary.statictics.cardlibrary;
+package DeckSummary.statistics.cardlibrary;
 
-import DeckSummary.statictics.ast.Expression;
-import DeckSummary.statictics.ast.StatValue;
+import DeckSummary.statistics.ast.Expression;
 import com.google.gson.*;
 import com.google.gson.annotations.SerializedName;
 

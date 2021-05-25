@@ -1,7 +1,7 @@
 package DeckSummary;
 
-import DeckSummary.statictics.DeckStatsCommand;
-import DeckSummary.statictics.cardlibrary.CardStatsLibrary;
+import DeckSummary.statistics.DeckStatsCommand;
+import DeckSummary.statistics.cardlibrary.CardStatsLibrary;
 import basemod.BaseMod;
 import basemod.devcommands.ConsoleCommand;
 import basemod.interfaces.PostInitializeSubscriber;

@@ -1,7 +1,7 @@
-package DeckSummary.statictics.patches;
+package DeckSummary.statistics.patches;
 
 
-import DeckSummary.statictics.StatCollection;
+import DeckSummary.statistics.StatCollection;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.CardGroup;

@@ -1,7 +1,7 @@
 package DeckSummary.statistics.cardlibrary;
 
-import DeckSummary.statictics.ast.Operation;
-import DeckSummary.statictics.ast.StatValue;
+import DeckSummary.statistics.ast.Operation;
+import DeckSummary.statistics.ast.StatValue;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

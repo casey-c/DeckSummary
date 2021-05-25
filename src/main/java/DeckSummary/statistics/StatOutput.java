@@ -1,4 +1,4 @@
-package DeckSummary.statictics;
+package DeckSummary.statistics;
 
 public class StatOutput {
     public String name;

@@ -1,6 +1,6 @@
 package DeckSummary.statistics.cardlibrary;
 
-import DeckSummary.statictics.ast.StatValue;
+import DeckSummary.statistics.ast.StatValue;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.junit.jupiter.api.Test;
