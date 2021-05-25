@@ -1,0 +1,189 @@
+{
+  "Anger": {
+    "damage": "DAMAGE"
+  },
+  "Armaments": {
+    "block": "BLOCK"
+  },
+  "Bash": {
+    "damage": "DAMAGE"
+  },
+  "Battle Trance": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Blood for Blood": {
+    "damage": "DAMAGE"
+  },
+  "Bloodletting": {
+    "energy": "MAGIC_NUMBER"
+  },
+  "Bludgeon": {
+    "damage": "DAMAGE"
+  },
+  "Burning Pact": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Carnage": {
+    "damage": "DAMAGE"
+  },
+  "Clash": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": "DAMAGE"
+    }
+  },
+  "Cleave": {
+    "damage": "DAMAGE"
+  },
+  "Clothesline": {
+    "damage": "DAMAGE"
+  },
+  "Defend_R": {
+    "block": "BLOCK"
+  },
+  "Dropkick": {
+    "damage": "DAMAGE",
+    "draw": {
+      "conservative": 0,
+      "optimistic": 1
+    },
+    "energy": {
+      "conservative": 0,
+      "optimistic": 1
+    }
+  },
+  "Feed": {
+    "damage": "DAMAGE",
+    "heal": "MAGIC_NUMBER"
+  },
+  "Fiend Fire": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": {
+        "value": 9,
+        "type": "MULTIPLE_OF_DAMAGE"
+      }
+    }
+  },
+  "Flame Barrier": {
+    "block": "BLOCK"
+  },
+  "Ghostly Armor": {
+    "block": "BLOCK"
+  },
+  "Headbutt": {
+    "damage": "DAMAGE"
+  },
+  "Heavy Blade": {
+    "damage": "DAMAGE"
+  },
+  "Hemokinesis": {
+    "damage": "DAMAGE"
+  },
+  "Immolate": {
+    "damage": "DAMAGE"
+  },
+  "Impervious": {
+    "block": "BLOCK"
+  },
+  "Iron Wave": {
+    "damage": "DAMAGE",
+    "block": "BLOCK"
+  },
+  "Offering": {
+    "draw": "MAGIC_NUMBER",
+    "energy": 2
+  },
+  "Perfected Strike": {
+    "damage": "DAMAGE"
+  },
+  "Pommel Strike": {
+    "damage": "DAMAGE",
+    "draw": "MAGIC_NUMBER"
+  },
+  "Power Through": {
+    "block": "BLOCK"
+  },
+  "Pummel": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "Rampage": {
+    "damage": "DAMAGE"
+  },
+  "Reaper": {
+    "damage": "DAMAGE",
+    "heal": "DAMAGE"
+  },
+  "Reckless Charge": {
+    "damage": "DAMAGE"
+  },
+  "Searing Blow": {
+    "damage": "DAMAGE"
+  },
+  "Second Wind": {
+    "block": {
+      "conservative": 0,
+      "optimistic": {
+        "value": 9,
+        "type": "MULTIPLE_OF_BLOCK"
+      }
+    }
+  },
+  "Seeing Red": {
+    "energy": 1
+  },
+  "Seeing Red+": {
+    "energy": 2
+  },
+  "Sentinel": {
+    "block": "BLOCK",
+    "energy": {
+      "conservative": 0,
+      "optimistic": 2
+    }
+  },
+  "Sentinel+": {
+    "block": "BLOCK",
+    "energy": {
+      "conservative": 0,
+      "optimistic": 3
+    }
+  },
+  "Sever Soul": {
+    "damage": "DAMAGE"
+  },
+  "Shrug It Off": {
+    "block": "BLOCK",
+    "draw": 1
+  },
+  "Strike_R": {
+    "damage": "DAMAGE"
+  },
+  "Sword Boomerang": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "Thunderclap": {
+    "damage": "DAMAGE"
+  },
+  "True Grit": {
+    "damage": "DAMAGE"
+  },
+  "Twin Strike": {
+    "damage": {
+      "value": 2,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Uppercut": {
+    "damage": "DAMAGE"
+  },
+  "Whirlwind": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": "ENERGY_TIMES_DAMAGE"
+    }
+  },
+  "Wild Strike": {
+    "damage": "DAMAGE"
+  }
+}

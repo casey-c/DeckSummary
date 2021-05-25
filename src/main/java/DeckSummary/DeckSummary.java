@@ -1,6 +1,9 @@
 package DeckSummary;
 
+import DeckSummary.statictics.DeckStatsCommand;
+import DeckSummary.statictics.cardlibrary.CardStatsLibrary;
 import basemod.BaseMod;
+import basemod.devcommands.ConsoleCommand;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import org.apache.logging.log4j.LogManager;
@@ -18,5 +21,8 @@ public class DeckSummary implements PostInitializeSubscriber {
     @Override
     public void receivePostInitialize() {
         logger.info("DeckSummary init");
+
+        CardStatsLibrary.load();
+        ConsoleCommand.addCommand("deckstats", DeckStatsCommand.class);
     }
 }

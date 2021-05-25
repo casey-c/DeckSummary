@@ -1,0 +1,257 @@
+{
+  "Acrobatics": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Adrenaline": {
+    "draw": 2,
+    "energy": 1
+  },
+  "Adrenaline+": {
+    "draw": 2,
+    "energy": 2
+  },
+  "All Out Attack": {
+    "damage": "DAMAGE"
+  },
+  "Backflip": {
+    "block": "BLOCK",
+    "draw": 2
+  },
+  "Backstab": {
+    "damage": "DAMAGE"
+  },
+  "Bane": {
+    "damage": {
+      "conservative": "DAMAGE",
+      "optimistic": {
+        "value": "2",
+        "type": "MULTIPLE_OF_DAMAGE"
+      }
+    }
+  },
+  "Blade Dance": {
+    "damage": {
+      "value": 4,
+      "type": "MULTIPLE_OF_MAGIC_NUMBER"
+    }
+  },
+  "Blur": {
+    "block": "BLOCK"
+  },
+  "Bouncing Flask": {
+    "poison": {
+      "value": 3,
+      "type": "MULTIPLE_OF_MAGIC_NUMBER"
+    }
+  },
+  "Calculated Gamble": {
+    "draw": {
+      "conservative": 0,
+      "optimistic": 9
+    }
+  },
+  "Catalyst": {
+
+  },
+  "Choke": {
+
+  },
+  "Clock and Dagger": {
+    "block": "BLOCK",
+    "damage": {
+      "value": 4,
+      "type": "MULTIPLE_OF_MAGIC_NUMBER"
+    }
+  },
+  "Concentrate": {
+    "energy": 2
+  },
+  "Corpse Explosion": {
+    "poison": "MAGIC_NUMBER"
+  },
+  "Crippling Poison": {
+    "poison": "MAGIC_NUMBER"
+  },
+  "Dagger Spray": {
+    "damage": {
+      "value": 2,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Dagger Throw": {
+    "damage": "DAMAGE",
+    "draw": 1
+  },
+  "Dash": {
+    "damage": "DAMAGE",
+    "block": "BLOCK"
+  },
+  "Deadly Poison": {
+    "poison": "MAGIC_NUMBER"
+  },
+  "Defend_G": {
+    "block": "BLOCK"
+  },
+  "Deflect": {
+    "block": "BLOCK"
+  },
+  "Die Die Die": {
+    "damage": "DAMAGE"
+  },
+  "Dodge And Roll": {
+    "block": {
+      "value": 2,
+      "type": "MULTIPLE_OF_BLOCK"
+    }
+  },
+  "Doppelganger": {
+    "draw": "ENERGY",
+    "energy": "ENERGY"
+  },
+  "Endless Agony": {
+    "damage": {
+      "value": 2,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Escape Plan": {
+    "draw": 1,
+    "block": {
+      "conservative": 0,
+      "optimistic": "BLOCK"
+    }
+  },
+  "Eviscerate": {
+    "damage": "DAMAGE_TIMES_MAGIC_NUMBER"
+  },
+  "Expertise": {
+    "draw": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "Finisher": {
+
+  },
+  "Flechettes": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": {
+        "value": 9,
+        "type": "MULTIPLE_OF_DAMAGE"
+      }
+    }
+  },
+  "Flying Knee": {
+    "damage": "DAMAGE",
+    "energy": 1
+  },
+  "Glass Knife": {
+    "damage": {
+      "value": 2,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Grand Finale": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": "DAMAGE"
+    }
+  },
+  "Heel Hook": {
+    "damage": "DAMAGE",
+    "draw": {
+      "conservative": 0,
+      "optimistic": 1
+    },
+    "energy": {
+      "conservative": 0,
+      "optimistic": 1
+    }
+  },
+  "Leg Sweep": {
+    "block": "BLOCK"
+  },
+  "Masterful Stab": {
+    "damage": "DAMAGE"
+  },
+  "Neutralize": {
+    "damage": "DAMAGE"
+  },
+  "Outmaneuver": {
+    "energy": 2
+  },
+  "Outmaneuver+": {
+    "energy": 3
+  },
+  "Poisoned Stab": {
+    "damage": "DAMAGE",
+    "poison": "MAGIC_NUMBER"
+  },
+  "Predator": {
+    "damage": "DAMAGE",
+    "draw": 2
+  },
+  "Prepared": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Quick Slash": {
+    "damage": "DAMAGE",
+    "draw": 1
+  },
+  "Reflex": {
+    "draw": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "Riddle With Holes": {
+    "damage": {
+      "value": 5,
+      "type": "MULTIPLE_OF_DAMAGE"
+    }
+  },
+  "Setup": {
+    "draw": -1,
+    "energy": {
+      "conservative": 0,
+      "optimistic": 3
+    }
+  },
+  "Skewer": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": "ENERGY_TIMES_DAMAGE"
+    }
+  },
+  "Slice": {
+    "damage": "DAMAGE"
+  },
+  "Sneaky Strike": {
+    "damage": "DAMAGE"
+  },
+  "Storm of Steel": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": 36
+    }
+  },
+  "Strike_G": {
+    "damage": "DAMAGE"
+  },
+  "Sucker Punch": {
+    "damage": "DAMAGE"
+  },
+  "Survivor": {
+    "block": "BLOCK"
+  },
+  "Tactician": {
+    "energy": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "Unload": {
+    "damage": "DAMAGE"
+  }
+}

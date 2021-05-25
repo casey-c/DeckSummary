@@ -1,0 +1,80 @@
+{
+  "Bandage Up": {
+    "heal": "MAGIC_NUMBER"
+  },
+  "Bite": {
+    "damage": "DAMAGE",
+    "heal": "MAGIC_NUMBER"
+  },
+  "Deep Breath": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Dramatic Entrance": {
+    "damage": "DAMAGE"
+  },
+  "Finesse": {
+    "block": "BLOCK",
+    "draw": 1
+  },
+  "Flash of Steel": {
+    "damage": "DAMAGE",
+    "draw": 1
+  },
+  "Forethought": {
+
+  },
+  "Good Instincts": {
+    "block": "BLOCK"
+  },
+  "Hand of Greed": {
+    "damage": "DAMAGE"
+  },
+  "Impatience": {
+    "draw": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "Madness": {
+    "energy": {
+      "conservative": 0,
+      "optimistic": 2
+    }
+  },
+  "Madness+": {
+    "energy": {
+      "conservative": 0,
+      "optimistic": 3
+    }
+  },
+  "Master of Strategy": {
+    "draw": "MAGIC_NUMBER"
+  },
+  "Panic Button": {
+    "block": "BLOCK"
+  },
+  "Ritual Dagger": {
+    "damage": "DAMAGE"
+  },
+  "Secret Technique": {
+    "draw": 1
+  },
+  "Secret Weapon": {
+    "draw": 1
+  },
+  "Swift Strike": {
+    "damage": "DAMAGE"
+  },
+  "The Bomb": {
+    "damage": {
+      "conservative": 0,
+      "optimistic": "MAGIC_NUMBER"
+    }
+  },
+  "Thinking Ahead": {
+    "draw": 1
+  },
+  "Violence": {
+    "draw": "MAGIC_NUMBER"
+  }
+}
