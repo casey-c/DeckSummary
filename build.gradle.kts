@@ -2,10 +2,9 @@ plugins {
     java
 }
 
-
 /*
 Setup environment variables
-* stsInstallLocation should point to the steam install directory
+* stsInstallLocation should point to the Steam install directory
 * compileOnlyLibs should point to a directory containing any JARs you reference
     - e.g. this directory should have desktop-1.0.jar, ModTheSpire.jar, BaseMod.jar
     - NOTE: these compileOnlyLibs are not included in the JAR, so you will get runtime
@@ -23,11 +22,15 @@ repositories {
 
 dependencies {
     compileOnly(fileTree(compileOnlyLibs))
+    compileOnly("io.github.casey-c:easel:0.0.1")
 
+    // Tests
     testImplementation(fileTree(compileOnlyLibs))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.0-M1")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.0-M1")
 }
+
+// --------------------------------------------------------------------------------
 
 tasks.register<Jar>("buildJAR") {
     group = "Slay the Spire"
@@ -60,3 +63,5 @@ tasks.register<Copy>("buildAndCopyJAR") {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+// --------------------------------------------------------------------------------
